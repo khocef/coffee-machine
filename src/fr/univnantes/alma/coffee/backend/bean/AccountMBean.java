@@ -35,7 +35,7 @@ public class AccountMBean {
 		// HttpRequest request = (HttpRequest) FacesContext.getCurrentInstance()
 		// .getExternalContext().getRequest();
 		Account account = new Account(uid, amount);
-		this.facade.create(account);
+		//this.facade.create(account);
 		return account;
 	}
 	
@@ -47,7 +47,7 @@ public class AccountMBean {
 	public void get() {
 		
 		int x = 1;
-		List<Account> accounts = facade.findAll();
+		List<Account> accounts = null;
 		if (accounts.size() == 0)
 			LOGGER.log(Level.WARNING, "###############Nothing############");
 		else
